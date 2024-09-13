@@ -1,18 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
+//importo el controlador kajdsf
+const {getUsers, addUser, getUserById} = require('../controllers/userController');
+
 //Obtener todos los usuarios
-router.get('/', (req, res) => {
-    console.log('GET Users');
-});
+router.get('/', getUsers);
 //obtener por id
-router.get('/:id', (req, res) => {
-    console.log('GET Users by ID');
-});
+router.get('/:id', getUserById);
 //crear usuarios
-router.post('/', (req, res) => {
-    console.log('POST User');
-})
+router.post('/', addUser);
 //actualizar usuario
 router.put('/:id', (req, res) => {
     console.log('PUT User');
@@ -22,4 +19,4 @@ router.delete('/:id', (req, res) => {
     console.log('DELETE User');
 })
 
-nodule.exports = router;
+module.exports = router;

@@ -22,4 +22,4 @@ router.delete('/:id', (req, res) => {
     console.log('DELETE Product');
 })
 
-nodule.exports = router;
+module.exports = router;
